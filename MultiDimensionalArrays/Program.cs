@@ -63,6 +63,20 @@ namespace MultiDimensionalArrays
             }
 
             // toon alle elementen met een dubbele loop
+            for (int i = 0; i < numberMatrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < numberMatrix.GetLength(1); j++)
+                {
+                    Console.WriteLine(numberMatrix[i,j]);
+                    // huidig vakje in de array veranderen naar iets anders
+                    numberMatrix[i, j] = 99;
+                }
+            }
+
+            foreach (int i in numberMatrix)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
